@@ -15,6 +15,7 @@ exec_always --no-startup-id picom
 exec_always --no-startup-id dunst
 exec_always --no-startup-id polybar
 #exec_always --no-startup-id ~/.config/polybar/scripts/polybar.sh &
+exec --no-startup-id alacritty -e sh ~/.config/i3/start.sh
 
 # Border Config
 default_border pixel 2
