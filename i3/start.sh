@@ -9,8 +9,8 @@ CHANGE_BG()
 	i3lock -p win -i "$HOME/.config/i3/img/loadings/loading$bg.png"
 }
 
-nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz home-manager
-nix-channel --add https://github.com/nixos/nixpkgs/archive/refs/tags/23.05.tar.gz nixpkgs
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz home-manager
+nix-channel --add https://github.com/nixos/nixpkgs/archive/refs/tags/24.05.tar.gz nixpkgs
 nix-channel --update
 
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }
+{ config, pkgs, ... }:
 
 {
   fonts.fontconfig.enable = true;
@@ -31,7 +31,7 @@
       (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
     ];
 
-    stateVersion = "23.05";
+    stateVersion = "24.05";
   };
 
   programs = {
