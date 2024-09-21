@@ -12,12 +12,8 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
+          -- "asm-lsp",
           "clangd",
-          "lua_ls",
-          "csharp_ls",
-          "ocamllsp",
-          "pylsp",
-          "ltex",
         },
       })
     end,
@@ -41,13 +37,16 @@ return {
         capabilities = capabilities,
       })
 
-      lspconfig.csharp_ls.setup({
-        capabilities = capabilities,
-      })
-
       lspconfig.clangd.setup({
         capabilities = capabilities,
       })
+
+      vim.g.asmsyntax = 'asm68k'
+      lspconfig.m68k.setup {
+        capabilities = capabilities,
+        cmd = { "m68k-lsp-server", "--stdio" },
+        filetype = { "asm68k", "asm" },
+      }
 
       -- lspconfig.omnisharp.setup({
       --   cmd = {

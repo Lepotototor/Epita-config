@@ -25,4 +25,4 @@ vim.keymap.set('n', 'dt', function() require('dap').toggle_breakpoint() end)
 vim.keymap.set('n', 'dc', function() require('dap').continue() end)
 
 -- toggle terminal
-vim.keymap.set('n', '<C-x>', '<CMD>lua require("FTerm").toggle()<CR>')
+-- vim.keymap.set('n', '<C-x>', '<CMD>lua require("FTerm").toggle()<CR>')

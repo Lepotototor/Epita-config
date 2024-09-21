@@ -1,22 +1,33 @@
+palette = "rose-pine"
+
+[palettes.rose-pine]
+overlay = '#26233a'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ebbcba'
+pine = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
+
 ## FIRST LINE/ROW: Info & Status
 # First param ─┌
 [username]
-format = " [╭─$user]($style)@"
+format = " [╭─$user]($style) in "
 show_always = true
-style_root = "bold red"
-style_user = "bold red"
+style_root = "bold love"
+style_user = "bold love"
 
 # Second param
-[hostname]
-disabled = false
-format = "[$hostname]($style) in "
-ssh_only = false
-style = "bold dimmed red"
-trim_at = "-"
+## [hostname]
+## disabled = false
+## format = "[$hostname]($style) in "
+## ssh_only = false
+## style = "bold dimmed red"
+## trim_at = "-"
 
 # Third param
 [directory]
-style = "purple"
+style = "iris"
 truncate_to_repo = true
 truncation_length = 0
 truncation_symbol = "repo: "
@@ -25,13 +36,20 @@ truncation_symbol = "repo: "
 [sudo]
 disabled = false
 
+
+[git_branch]
+#format = "[](fg:overlay)[ $symbol $branch ]($style)[](fg:overlay)"
+format = "[➜ $symbol $branch ]($style)"
+style = "fg:foam"
+symbol = ""
+
 # Before all the version info (python, nodejs, php, etc.)
 [git_status]
 ahead = "⇡${count}"
 behind = "⇣${count}"
 deleted = "x"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-style = "white"
+style = "pine"
 
 # Last param in the first line/row
 [cmd_duration]
@@ -50,30 +68,30 @@ full_symbol = ""
 
 [[battery.display]]  # "bold red" style when capacity is between 0% and 10%
 disabled = false
-style = "bold red"
+style = "bold love"
 threshold = 15
 
-[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+[[battery.display]]  # "bold gold" style when capacity is between 10% and 30%
 disabled = true
-style = "bold yellow"
+style = "bold pine"
 threshold = 50
 
 [[battery.display]]  # "bold green" style when capacity is between 10% and 30%
 disabled = true
-style = "bold green"
+style = "bold iris"
 threshold = 80
 
 # Prompt: optional param 1
 [time]
 disabled = true
 format = " 🕙 $time($style)\n"
-style = "bright-white"
+style = "bright-pine"
 time_format = "%T"
 
 # Prompt: param 2
 [character]
-error_symbol = " [×](bold red)"
-success_symbol = " [╰─λ](bold red)"
+error_symbol = " [×](bold rose)"
+success_symbol = " [╰─🌺](bold love)"
 
 # SYMBOLS
 [status]
@@ -81,7 +99,7 @@ disabled = false
 format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
 map_symbol = true
 pipestatus = true
-symbol = "🔴"
+symbol = "📛"
 
 [aws]
 symbol = " "
@@ -100,9 +118,6 @@ symbol = " "
 
 [elm]
 symbol = " "
-
-[git_branch]
-symbol = " "
 
 [golang]
 symbol = " "
