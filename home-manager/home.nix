@@ -34,6 +34,7 @@
       waybar
       eww
       yazi
+      libsForQt5.sddm
     ];
 
     stateVersion = "24.05";
@@ -46,5 +47,7 @@
 
   programs.kitty.enable = true; # required for the default Hyprland config
   wayland.windowManager.hyprland.enable = true; # enable Hyprland
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm.wayland.enable = true;
 
 }
