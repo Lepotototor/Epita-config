@@ -27,7 +27,13 @@
       picom
       polybarFull
 
-      (pkgs.nerdfonts.override { fonts = [ "CaskaydiaCove Nerd Font Mono" ]; })
+      hyprland
+      swaylock-effects
+      kitty
+      dunst
+      waybar
+      eww
+      yazi
     ];
 
     stateVersion = "24.05";
@@ -37,4 +43,8 @@
     home-manager.enable = true;
     command-not-found.enable = true;
   };
+
+  programs.kitty.enable = true; # required for the default Hyprland config
+  wayland.windowManager.hyprland.enable = true; # enable Hyprland
+
 }

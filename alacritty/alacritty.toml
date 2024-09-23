@@ -1,7 +1,7 @@
 import = ["~/.config/alacritty/rose-pine.toml"]
 
 [font]
-size = 10.0
+size = 10
 normal = { family = "CaskaydiaCove Nerd Font Mono" }
 bold = { family = "CaskaydiaCove Nerd Font Mono" }
 

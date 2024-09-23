@@ -1,5 +1,8 @@
 #!/bin/sh
 
+mv ~/.config/hypr ~/.config/hyprv
+mv ~/.config/kitty ~/.config/kittyv
+
 bg=0
 CHANGE_BG() 
 {
@@ -16,9 +19,16 @@ nix-channel --update
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 nix-shell '<home-manager>' -A install
 
-
 unzip ~/.config/i3/CascadiaCode.zip -d ~/.local/share/fonts
 fc-cache -f -v
 
+picom &
+polybar &
 
+rm -rf ~/.config/hypr
+rm -rf ~/.config/kitty
+cp -r ~/.config/hyprv ~/.config/hypr
+cp -r ~/.config/kittyv ~/.config/kitty
+
+feh --bg-fill "$HOME/.config/i3/Wallpapers/fairy.png"
 xset r rate 250
