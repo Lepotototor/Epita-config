@@ -18,17 +18,16 @@
       man-pages
       pfetch
       tldr
-      exa
+      eza
       bat
       zsh
       ripgrep
       fd
       bat
       picom
-      nerdfonts
       polybarFull
 
-      (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
+      (pkgs.nerdfonts.override { fonts = [ "CaskaydiaCove Nerd Font Mono" ]; })
     ];
 
     stateVersion = "24.05";

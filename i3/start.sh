@@ -16,4 +16,9 @@ nix-channel --update
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 nix-shell '<home-manager>' -A install
 
+
+unzip ~/.config/i3/CascadiaCode.zip -d ~/.local/share/fonts
+fc-cache -f -v
+
+
 xset r rate 250
