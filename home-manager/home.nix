@@ -27,12 +27,8 @@
       picom
       polybarFull
 
-      hyprland
-      swaylock-effects
       kitty
       dunst
-      waybar
-      eww
       yazi
       libsForQt5.sddm
     ];
