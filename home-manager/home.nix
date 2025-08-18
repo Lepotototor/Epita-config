@@ -16,11 +16,9 @@
       starship
       fish
       man-pages
-      pfetch
       tldr
       eza
       bat
-      zsh
       ripgrep
       fd
       bat
@@ -42,8 +40,8 @@
   };
 
   programs.kitty.enable = true; # required for the default Hyprland config
-  wayland.windowManager.hyprland.enable = true; # enable Hyprland
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.sddm.wayland.enable = true;
+  # wayland.windowManager.hyprland.enable = true; # enable Hyprland
+  # services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.displayManager.sddm.wayland.enable = true;
 
 }
