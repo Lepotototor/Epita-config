@@ -5,17 +5,17 @@ set $mod Mod4
 font pango:Cascadia Cove 8
 
 # Execs
-# Wallpaper slide show
-exec --no-startup-id feh --no-fehbg --bg-fill --randomize -r ~/.config/i3/Wallpapers/
-exec --no-startup-id systemd-run --on-calendar="*-*-* *:0/1:00" --user \
-    /usr/bin/feh --no-fehbg --bg-fill --randomize -r ~/.config/i3/Wallpapers/
+# exec --no-startup-id feh --no-fehbg --bg-fill --randomize -r ~/.config/i3/Wallpapers/
 
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id picom
 exec_always --no-startup-id dunst
 exec_always --no-startup-id polybar
-#exec_always --no-startup-id ~/.config/polybar/scripts/polybar.sh &
 exec --no-startup-id alacritty -e sh ~/.config/i3/start.sh
+
+# Wallpaper slide show
+exec --no-startup-id systemd-run --on-calendar="*:0/10" --user \
+    /usr/bin/feh --no-fehbg --bg-fill --randomize -r ~/.config/i3/Wallpapers/
 
 # Border Config
 default_border pixel 2
@@ -74,9 +74,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # Shortcuts
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec sh -c 'command -v kitty >/dev/null 2>&1 && exec kitty || exec alacritty'
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+b exec firefox
+bindsym $mod+x exec firefox
 bindsym $mod+e exec nautilus
 bindsym $mod+n exec alacritty nvim
 bindsym Print exec flameshot gui
