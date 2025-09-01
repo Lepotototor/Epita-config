@@ -22,8 +22,8 @@ CHANGE_BG()
 #unzip ~/.config/i3/CascadiaCode.zip -d ~/.local/share/fonts
 # fc-cache -f -v
 
-picom &
-polybar &
+# picom &
+# polybar &
 
 # rm -rf ~/.config/hypr
 # rm -rf ~/.config/kitty
@@ -32,3 +32,6 @@ polybar &
 
 feh --bg-fill "$HOME/.config/i3/Wallpapers/fairy.png"
 xset r rate 250
+
+# keep terminal open
+fish
