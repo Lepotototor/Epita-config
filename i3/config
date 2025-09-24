@@ -14,8 +14,8 @@ exec_always --no-startup-id polybar
 exec --no-startup-id alacritty -e sh ~/.config/i3/start.sh
 
 # Wallpaper slide show
-exec --no-startup-id systemd-run --on-calendar="*:0/10" --user \
-    /usr/bin/feh --no-fehbg --bg-fill --randomize -r ~/.config/i3/Wallpapers/
+#exec --no-startup-id systemd-run --on-calendar="*:0/10" --user \
+    #/usr/bin/feh --no-fehbg --bg-fill --randomize -r ~/.config/i3/Wallpapers/
 
 # Border Config
 default_border pixel 2

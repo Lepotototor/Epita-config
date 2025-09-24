@@ -125,7 +125,7 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"     # Sort installed packages acc
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
 
 bind \cz fg
-bind \ck "i3lock -i /home/victor.flament/.config/i3/Wallpapers/i3lock.png"
+bind \ck "i3lock -p win -i ~/.config/i3/Wallpapers/poutou.png"
 
 # Custom alias
 abbr setclip "xclip -selection c"

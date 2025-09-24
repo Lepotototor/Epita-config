@@ -8,8 +8,6 @@
     homeDirectory = "/home/victor.flament";
 
     packages = with pkgs; [
-      neofetch
-      neovim
       lua-language-server
       clang-tools
       rofi
@@ -28,7 +26,6 @@
       kitty
       dunst
       yazi
-      libsForQt5.sddm
     ];
 
     stateVersion = "24.05";
@@ -37,6 +34,13 @@
   programs = {
     home-manager.enable = true;
     command-not-found.enable = true;
+    neovim = {
+      enable = true;
+      extraPackages = with pkgs; [
+        clang-tools
+        lua-language-server
+      ];
+    };
   };
 
   programs.kitty.enable = true; # required for the default Hyprland config
