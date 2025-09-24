@@ -124,6 +124,8 @@ alias hw='hwinfo --short'                          # Hardware Info
 alias big="expac -H M '%m\t%n' | sort -h | nl"     # Sort installed packages according to size in MB
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
 
+alias gitbkp='git add . && git commit -m "Backup" && git push'
+
 bind \cz fg
 bind \ck "i3lock -p win -i ~/.config/i3/Wallpapers/poutou.png"
 
