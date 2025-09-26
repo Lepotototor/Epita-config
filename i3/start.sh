@@ -12,12 +12,12 @@ nix-shell '<home-manager>' -A install
 
 nix profile install nixpkgs#neovim
 
-unzip ~/.config/i3/CascadiaCode.zip -d ~/.local/share/fonts
+# [ ! -d ~/.local/share/fonts/CascadiaCode ] && \
+#     unzip ~/.config/i3/CascadiaCode.zip -d ~/.local/share/fonts && \
 fc-cache -f -v
 
 systemd-run --user picom
 systemd-run --user polybar
-#polybar &
 
 rm -rf ~/.config/kitty
 mv ~/.config/kitty-backup ~/.config/kitty
@@ -26,5 +26,4 @@ feh --bg-fill "$HOME/.config/i3/Wallpapers/hello-kitty-antifa.jpg"
 xset r rate 250
 
 # keep terminal open
-#fish
 systemd-run --user kitty
