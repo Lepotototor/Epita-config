@@ -157,3 +157,5 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 setxkbmap us
 
 alias gpp="g++ -Wall -Wextra -Werror -pedantic -std=c++20 -Wold-style-cast"
+
+fastfetch

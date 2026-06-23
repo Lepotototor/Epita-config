@@ -23,6 +23,7 @@
       picom
       polybarFull
 
+      fastfetch
       kitty
       dunst
       yazi
