@@ -127,7 +127,7 @@ alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git package
 alias gitbkp='git add . && git commit -m "Backup" && git push'
 
 bind \cz fg
-bind \ck "i3lock -p win -i ~/.config/i3/Wallpapers/poutou.png"
+bind \ck "i3lock -p win -i ~/.config/i3/Wallpapers/i3lock.png"
 
 # Custom alias
 abbr setclip "xclip -selection c"
@@ -140,6 +140,7 @@ alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
+alias "тмшь"="nvim"
 
 # Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
@@ -152,3 +153,7 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 #neofetch --ascii ~/.config/fish/ascii_neofetch
 # neofetch
+
+setxkbmap us
+
+alias gpp="g++ -Wall -Wextra -Werror -pedantic -std=c++20 -Wold-style-cast"

@@ -2,7 +2,7 @@
 
 while true; do
     #aklog
-    i3lock -p win -i ~/.config/i3/Wallpapers/poutou.png
+    i3lock -p win -i ~/.config/i3/Wallpapers/i3lock.png
     SECONDS=0
     while [ $SECONDS -lt 3000 ];do
         if ! pgrep i3lock; then

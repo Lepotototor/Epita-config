@@ -26,9 +26,23 @@
       kitty
       dunst
       yazi
+
+      vtsls
+      prettierd
+      prettier
+      eslint_d
+      eslint
+
+	  libnotify
+	
+	  (pkgs.python313.withPackages (ppkgs: [
+		ppkgs.beautifulsoup4
+		ppkgs.types-beautifulsoup4
+		ppkgs.requests
+	  ]))
     ];
 
-    stateVersion = "24.05";
+    stateVersion = "25.11";
   };
 
   programs = {
@@ -37,8 +51,19 @@
     neovim = {
       enable = true;
       extraPackages = with pkgs; [
+		vscode-langservers-extracted
+
         clang-tools
         lua-language-server
+		cppcheck
+		selene
+
+        vtsls
+        prettierd
+        nodePackages.prettier
+        eslint_d
+        eslint
+		nodejs
       ];
     };
   };

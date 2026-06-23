@@ -1,15 +1,14 @@
 themes = {
+  "rose-pine-moon",
   "rose-pine-dawn",
   "everforest-light-soft",
   "everforest-light-medium",
   "everforest-light-hard",
   "everforest-dark-medium",
   "catppuccin-latte",
-  "gruvbox-material",
   "retrobox",
   "peachpuff",
   "catppuccin-frappe",
-  "rose-pine-moon",
   "rose-pine",
   "evening",
   "catppuccin-macchiato",
@@ -63,7 +62,6 @@ return {
   "rose-pine/neovim",
   "catppuccin/nvim",
   "neanias/everforest-nvim",
-  "sainnhe/gruvbox-material",
 
   vim.api.nvim_create_user_command("IncrementTheme", IncrementTheme, {}),
   vim.api.nvim_create_user_command("DecrementTheme", DecrementTheme, {}),
@@ -72,6 +70,6 @@ return {
   vim.keymap.set("n", "<C-,>", ":DecrementTheme <CR>", {}),
 
   config = function()
-    vim.cmd.colorscheme("rose-pine-dawn")
+    vim.cmd.colorscheme("rose-pine-moon")
   end,
 }
